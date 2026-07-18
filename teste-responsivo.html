@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Responsividade</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0f;
+      color: #f0f0f5;
+      font-family: 'Inter', system-ui, sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: .5rem;
+      color: #7c5cfc;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: .8rem;
+      color: #8888a4;
+      margin-bottom: 2rem;
+    }
+    .devices {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .device {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .8rem;
+    }
+    .device-label {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #8888a4;
+    }
+    .device-size {
+      font-size: .65rem;
+      color: #555;
+    }
+    .phone-frame {
+      border: 3px solid #2a2a3e;
+      border-radius: 32px;
+      padding: 12px 6px;
+      background: #1a1a28;
+      box-shadow: 0 8px 32px rgba(0,0,0,.5);
+      position: relative;
+    }
+    .phone-frame::before {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 5px;
+      background: #2a2a3e;
+      border-radius: 3px;
+      margin: 0 auto 8px;
+    }
+    .phone-frame iframe {
+      border: none;
+      border-radius: 20px;
+      display: block;
+      background: #08080d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Teste de Responsividade Mobile</h1>
+  <p class="subtitle">Visualizacao real da bio page em diferentes tamanhos de celular</p>
+
+  <div class="devices">
+
+    <div class="device">
+      <span class="device-label">iPhone SE</span>
+      <span class="device-size">375 x 667</span>
+      <div class="phone-frame">
+        <iframe src="index.html" width="375" height="667" scrolling="yes"></iframe>
+      </div>
+    </div>
+
+    <div class="device">
+      <span class="device-label">iPhone 14</span>
+      <span class="device-size">390 x 844</span>
+      <div class="phone-frame">
+        <iframe src="index.html" width="390" height="844" scrolling="yes"></iframe>
+      </div>
+    </div>
+
+    <div class="device">
+      <span class="device-label">Android</span>
+      <span class="device-size">360 x 740</span>
+      <div class="phone-frame">
+        <iframe src="index.html" width="360" height="740" scrolling="yes"></iframe>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
